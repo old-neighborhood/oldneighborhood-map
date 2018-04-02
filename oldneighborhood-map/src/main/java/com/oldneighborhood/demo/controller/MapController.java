@@ -18,9 +18,7 @@ public class MapController {
 	
 	@RequestMapping(path= {"/geo"})
 	public String mapGeo(@RequestBody Map<String, Object> reqMap) {
-		System.out.println(">>>>>>>>>>>>>>>>>>>>controller start<<<<<<<<<<<<<<<<<<<");
 		String response = mapService.mapGeo(reqMap.get("address").toString());
-		System.out.println(">>>>>>>>>>>>>>>>>>>>controller end <<<<<<<<<<<<<<<<<<<<");
 		return response;
 	}
 
