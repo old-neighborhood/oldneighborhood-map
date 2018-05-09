@@ -10,6 +10,7 @@
 		<!-- <input type="submit" value="上传" /> -->
 		<button id="upload" type="button"> 上传</button>
 	</form>
+	<img id="image_here" alt="here" src="/common/favicon-20180411042800894.ico" />
 	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js"></script> -->
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -38,7 +39,7 @@
 	                console.log(msg);
 	            	var flag = msg.result;
 	            	if(flag=="success"){
-	            		console.log(msg.filepath+"上传成功！")
+	            		console.log(msg.filepath+"上传成功！");
 	            	}else if(flag=="error"){
 	            		console.log("上传失败！");
 	            	}

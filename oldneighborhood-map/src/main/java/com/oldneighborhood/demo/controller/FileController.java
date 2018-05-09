@@ -26,6 +26,9 @@ public class FileController {
 	@Value("${web.upload-excel}")
 	private String excelPath;
 	
+	@Value("${web.url}")
+	private String url;
+	
 	@RequestMapping("/uploading")
 	public String upload() {
 		return "uploading";
@@ -55,12 +58,15 @@ public class FileController {
 		System.out.println("filepath->>>>" + filepath);
 		try {
 			FileUtil.uploadFile(multipartFile.getBytes(), filepath, fileName);
-			return "{\"result\":\"success\",\"filepath\":\""+ (filepath + fileName) +"\"}";
+			return "{\"result\":\"success\",\"filename\":\""+ url +"/common/"+ fileName +"\"}";
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return "{\"result\":\"error\"}";
 	}
+	
+//	@RequestMapping("/display")
+//	public 
 	
 	/*@RequestMapping("/fileupload2")
 	public String uploadFile(@RequestParam("upload") MultipartFile file) {
