@@ -1,6 +1,7 @@
 package com.oldneighborhood.demo.controller;
 
 import java.io.IOException;
+import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -35,11 +36,12 @@ public class FileController {
 	}
 	
 	@RequestMapping("/fileupload")
-	public @ResponseBody String uploadFile(@RequestParam("file") MultipartFile multipartFile, String filename, HttpServletRequest req) {
+	public @ResponseBody String uploadFile(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest req) {
 		String contentType = multipartFile.getContentType();
 		//重新命名
 		String fileName = multipartFile.getOriginalFilename();
 		String suffix = fileName.substring(fileName.lastIndexOf(".") + 1);
+		String filename = UUID.randomUUID().toString().replace("-", "");
 		fileName = filename +"."+ suffix;
 		System.out.println("filename->>>" + fileName + "\nContentType->>>" + contentType);
 		//获取存储路径

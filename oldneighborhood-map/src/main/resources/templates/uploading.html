@@ -10,14 +10,14 @@
 		<!-- <input type="submit" value="上传" /> -->
 		<button id="upload" type="button"> 上传</button>
 	</form>
-	<img id="image_here" alt="here" src="/common/favicon-20180411042800894.ico" />
+	<br />
+	<img id="image_here" alt="here" style="width:200px" src="http://111.231.107.63:8085/common/example.jpg" />
 	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js"></script> -->
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript">
 	$().ready(function() {
-		console.log("notclick");
 	    $("#upload").click(function(){
-	    	console.log("click");
+	    	//console.log("click");
 	    	var form = $("#upload_form");
 	    	console.log(form[0]);
 	    	var formdata = new FormData(form[0]); 
@@ -25,8 +25,6 @@
 	    	console.log(file);
 	    	var formdata = new FormData();
 	    	formdata.append("file",file[0]); */
-	    	//名字不包括后缀名
-	    	formdata.append("filename","xxxxxxxx");
 	    	$.ajax({
 	            url: '/common/fileupload',
 	            type: 'POST',
@@ -37,14 +35,15 @@
 	            contentType: false,                // 告诉jQuery不要去设置Content-Type请求头
 	            success:function (msg) {           //成功回调
 	                console.log(msg);
+	                $("#upload").attr("disabled","disabled");
 	            	var flag = msg.result;
 	            	if(flag=="success"){
-	            		console.log(msg.filepath+"上传成功！");
+	            		console.log("上传成功！");
 	            	}else if(flag=="error"){
 	            		console.log("上传失败！");
 	            	}
 	            },error:function (err){
-	            	console.log("传输调用错误");
+	            	console.log("上传调用错误");
 	            }
 	        });
 	    });
