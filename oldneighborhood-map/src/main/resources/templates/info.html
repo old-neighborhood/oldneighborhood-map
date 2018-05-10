@@ -29,5 +29,53 @@
 			</tr>
 		</tbody>
 	</table>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>neighborhood-sendcode-service</th>
+				<th>url</th>
+				<th>request</th>
+				<th>response</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>发送邮件验证码</td>
+				<td>/sendcode/sendMsg</td>
+				<td>{"email":email}</td>
+				<td>{"hash":hash,"time":time}</td>
+			</tr>
+			<tr>
+				<td>验证码验证</td>
+				<td>/sendcode/validateCode</td>
+				<td>{"time":time,"hash":hash,"code":code}</td>
+				<td>{"result":"success/error/overdue"}</td>
+			</tr>
+		</tbody>
+	</table>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>neighborhood-register-service</th>
+				<th>url</th>
+				<th>request</th>
+				<th>response</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>游客用户注册</td>
+				<td>/register/usersignup</td>
+				<td>{"username":username, "password":password, "email":email}</td>
+				<td>{"result":"success"/"error"}</td>
+			</tr>
+			<tr>
+				<td>商业用户注册</td>
+				<td>/register/salersignup</td>
+				<td>{"username":username, "password":password, "email":email}</td>
+				<td>{"result":"success"/"error"}</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>

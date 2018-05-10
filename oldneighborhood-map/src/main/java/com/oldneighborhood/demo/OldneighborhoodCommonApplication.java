@@ -10,9 +10,9 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableEurekaClient
 @EnableFeignClients
 @ComponentScan("com.oldneighborhood.demo")
-public class OldneighborhoodMapApplication {
+public class OldneighborhoodCommonApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OldneighborhoodMapApplication.class, args);
+		SpringApplication.run(OldneighborhoodCommonApplication.class, args);
 	}
 }

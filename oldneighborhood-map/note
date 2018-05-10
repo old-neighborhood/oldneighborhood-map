@@ -1,3 +1,16 @@
 1.Error parsing HTTP request header......Invalid character found in the request target. 
 The valid characters are defined in RFC 7230 and RFC 3986
 GET 方式报错而POST方式正常？？？
+
++ common
+	+ image upload
+	+ file upload & download
+	+ deal with Excel
+	+ send email code & Register
+	+ Map 
+	+ MD5
+上传下载图片
+处理Excel文档
+发送验证码
+地图定位
+注册

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.oldneighborhood.demo.service.MapService;
 //http://localhost:8085/map/...
 @RestController
-//@RequestMapping(path= {"/map"})
+@RequestMapping(path= {"/map"})
 public class MapController {
 	
 	@Autowired

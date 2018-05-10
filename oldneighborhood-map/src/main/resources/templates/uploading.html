@@ -13,7 +13,7 @@
 	<br />
 	<img id="image_here" alt="here" style="width:200px" src="http://111.231.107.63:8085/common/example.jpg" />
 	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js"></script> -->
-	<script src="js/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
 	<script type="text/javascript">
 	$().ready(function() {
 	    $("#upload").click(function(){
@@ -26,7 +26,7 @@
 	    	var formdata = new FormData();
 	    	formdata.append("file",file[0]); */
 	    	$.ajax({
-	            url: '/common/fileupload',
+	            url: '/common/file/fileupload3',
 	            type: 'POST',
 	            data: formdata,                    // 上传formdata封装的数据
 	            dataType: 'JSON',
