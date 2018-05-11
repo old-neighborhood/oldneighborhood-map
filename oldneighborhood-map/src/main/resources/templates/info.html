@@ -16,14 +16,14 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>上传图片，返回图片url地址</td>
-				<td>http://111.231.107.63:8085/common/fileupload</td>
+				<td>上传文件，返回文件url地址</td>
+				<td>http://111.231.107.63:8085/common/file/fileupload</td>
 				<td>{"file":file}(使用Formdata)</td>
 				<td>{result: "success", filename: "http://xxx/common/xx.jpg"}</td>
 			</tr>
 			<tr>
 				<td>发送请求根据IP获取地址</td>
-				<td>http://111.231.107.63:8085/common/ip</td>
+				<td>http://111.231.107.63:8085/common/map/ip</td>
 				<td></td>
 				<td>{"status": "1","info": "OK","infocode": "10000","province": "江苏省","city": "南京市","adcode": "320100","rectangle": "118.4253323,31.80452471;119.050169,32.39401346"}</td>
 			</tr>
@@ -41,13 +41,13 @@
 		<tbody>
 			<tr>
 				<td>发送邮件验证码</td>
-				<td>/sendcode/sendMsg</td>
+				<td>/common/sendcode/sendMsg</td>
 				<td>{"email":email}</td>
 				<td>{"hash":hash,"time":time}</td>
 			</tr>
 			<tr>
 				<td>验证码验证</td>
-				<td>/sendcode/validateCode</td>
+				<td>/common/sendcode/validateCode</td>
 				<td>{"time":time,"hash":hash,"code":code}</td>
 				<td>{"result":"success/error/overdue"}</td>
 			</tr>
@@ -65,13 +65,13 @@
 		<tbody>
 			<tr>
 				<td>游客用户注册</td>
-				<td>/register/usersignup</td>
+				<td>/common/register/usersignup</td>
 				<td>{"username":username, "password":password, "email":email}</td>
 				<td>{"result":"success"/"error"}</td>
 			</tr>
 			<tr>
 				<td>商业用户注册</td>
-				<td>/register/salersignup</td>
+				<td>/common/register/salersignup</td>
 				<td>{"username":username, "password":password, "email":email}</td>
 				<td>{"result":"success"/"error"}</td>
 			</tr>
