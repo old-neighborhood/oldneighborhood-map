@@ -50,5 +50,17 @@ public class UserServiceImpl implements UserService {
 			return false;
 		}
 	}
+	
+	@Override
+	@Transactional
+	public String userReset(String email,String password) {
+		try {
+			userDao.userReset(password, email);
+			return "{\"result\":\"success\"}";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "{\"result\":\"error\"}";
+	}
 
 }

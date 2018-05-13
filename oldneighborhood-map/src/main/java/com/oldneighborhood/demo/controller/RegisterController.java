@@ -27,7 +27,7 @@ import com.oldneighborhood.demo.service.UserService;
 @RequestMapping("/register")
 @RestController
 public class RegisterController {
-
+	
 	@Autowired
 	private UserService userService;
 
@@ -58,5 +58,23 @@ public class RegisterController {
 		flag = salerService.salerSignup(saler);
 		return flag ? "{\"result\":\"success\"}" : "{\"result\":\"error\"}";
 	}
-
+	
+	/**
+	 * 
+	 * @Title: resetpassword  
+	 * @Description: 重置密码  
+	 */
+	@RequestMapping("reset")
+	public String resetpassword(@RequestBody Map<String, Object> reqMap) {
+		String type = reqMap.get("type").toString();
+		String email = reqMap.get("email").toString();
+		String password = reqMap.get("password").toString();
+		String result = null;
+		if (type.equals("user")) {
+			result = userService.userReset(email, password);
+		}else {
+			result = salerService.salerReset(email, password);
+		}
+		return result;
+	}
 }

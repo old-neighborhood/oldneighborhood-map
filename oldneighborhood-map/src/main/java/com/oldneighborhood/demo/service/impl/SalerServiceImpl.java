@@ -17,6 +17,18 @@ public class SalerServiceImpl implements SalerService{
 	
 	@Override
 	@Transactional
+	public String salerReset(String email,String password) {
+		try {
+			salerDao.salerReset(password, email);
+			return "{\"result\":\"success\"}";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "{\"result\":\"error\"}";
+	}
+	
+	@Override
+	@Transactional
 	public boolean salerSignup(Saler saler) {
 		LegalCheckImpl lci = new LegalCheckImpl();
 		if (!lci.isSalerLegal(saler)) {

@@ -12,5 +12,7 @@ import com.oldneighborhood.demo.entity.User;
 public interface UserService {
 
 	public boolean userSignup(User user);
+	
+	public String userReset(String email, String password);
 
 }

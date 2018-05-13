@@ -12,5 +12,7 @@ import com.oldneighborhood.demo.entity.Saler;
 public interface SalerService {
 
 	public boolean salerSignup(Saler saler);
+	
+	public String salerReset(String email, String password);
 
 }
