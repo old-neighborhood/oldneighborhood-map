@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet(
 			urlPatterns= {"/druid/*"} , 
 			initParams = {
-					//只允许部署的机器访问
+					//
 //					@WebInitParam(name="allow" , value="127.0.0.1") ,
 //					@WebInitParam(name="deny" , value="") ,
 					@WebInitParam(name="loginUsername" , value="oldneighborhood") , 
@@ -18,5 +18,4 @@ import javax.servlet.annotation.WebServlet;
 		)
 public class DruidStatViewServlet extends StatViewServlet {
 	private static final long serialVersionUID = 1L;
-
 }
