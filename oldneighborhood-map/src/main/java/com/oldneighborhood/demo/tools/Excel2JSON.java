@@ -40,7 +40,7 @@ public class Excel2JSON {
 				workbook = new XSSFWorkbook(ins);
 			}else {
 				workbook = null;
-				return "{\"}";
+				return "{\"\"}";
 			}
 		} catch(FileNotFoundException e1) {
 			e1.printStackTrace();
