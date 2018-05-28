@@ -4,7 +4,7 @@ GET 方式报错而POST方式正常？？？
 
 + common
 	+ image upload
-	+ file upload & download
+	+ file upload & download - statistic
 	+ deal with Excel
 	+ send email code & Register
 	+ Map 
@@ -14,3 +14,19 @@ GET 方式报错而POST方式正常？？？
 发送验证码
 地图定位
 注册
+
+
+2.文件上传下载
+	https://yq.aliyun.com/articles/401284
+	
+3.交互的场景
+	--人流量：历史数据输入 | 实时监控
+	--票务：购票系统
+	--停车场：停车场管理系统
+	flow/ticket/parking_lot
+	
+>show index from ticket_data;
+>alter table ticket_data drop foreign key Ticket_Site_ID;
+>alter table ticket_data drop index Ticket_Site_ID;
+>alter table ticket_data drop site_ID;
+-> http://blog.sina.com.cn/s/blog_6151984a0100l197.html
